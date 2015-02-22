@@ -1,0 +1,23 @@
+
+
+ features - data.frame to read the file features.txt
+ test - data.frame to read the file X_test.txt and contain all testing data
+test_act - data.frame to read the file y_test.txt , with test activities
+act - data.frame to read the file activities.txt
+test_sub - data.frame to read the file subject_test.txt with testing subjects
+train - data.frame to read the file X_train.txt and contain all training data
+ train_act <- data.frame to read the file y_train.txt ,with train activities
+train_sub - data.frame to read the file subject_train.txt with training subjects
+final - data.frame created by the join of the dataframes test and train
+final <- rbind(test, train)
+mean <- vector with the number of row of the features  data.frame that contain "mean()" in the columns V2
+std <-  vector with the number of row of the features  data.frame that contain "std()" in the columns V2
+filter - vector created by joining the vecotors mean, std and the numbers of columns 562, 563 
+final_filter - data.frame creaed when applied a filter to the dataframe final ( using the filter variable), obtaining only the columns that contains the
+strings "mean()" , "std()", plus the columns "Activities"and "Subjects"
+tinyData - dataframe created aggregating the dataframe final_filter, by the columns "Activities"and "Subjects', 
+caluclating the mean of the other columns
+i - counter variable used for the for loop
+x - auxiliary variable to contain the string relative to a Activity
+
+
